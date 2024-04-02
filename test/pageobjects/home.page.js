@@ -4,7 +4,7 @@ import { cards } from '../resources/cards.js';
 
 class HomePage extends Page {
     #cards = 'div.top-card'
-    #cars1 = 'element-group'
+    #card = "//h5[text()='Elements']/ancestor::div[@class='card mt-4 top-card']" // replace XYZ
 
     open () {
         return super.open('');
@@ -16,6 +16,14 @@ class HomePage extends Page {
         for (let i = 0; i < cardElements.length; i++) {
             await expect(cardElements.at(i)).toHaveText(cardValues.at(i))
         }
+    }
+
+    /**
+     * @param {string} element 
+     */
+    async clickOnCard(element) {
+        await $(this.#card).scrollIntoView()
+        await $(this.#card).click()
     }
 }
 
