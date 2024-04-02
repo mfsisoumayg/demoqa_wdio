@@ -8,6 +8,6 @@ describe('Radio Button Page', () => {
         await RadioButtonPage.validateAll()
         await RadioButtonPage.clickRadioBtn(radioBtns.yes)
 
-        await browser.saveScreenshot("radiobutton.png")
+        // await browser.saveScreenshot("radiobutton.png")
     })
 })
