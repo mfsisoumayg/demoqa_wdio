@@ -9,7 +9,6 @@ class ElementsPage extends Page {
 
     async validateLeftScrollMenu() {
         await LeftScrollComp.validateMenu()
-        await LeftScrollComp.validateMenu()
         const hello = await $('hello')
     }
 
